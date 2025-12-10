@@ -1,0 +1,352 @@
+/* Universal Resets and Base Styling */
+:root {
+    /* Colors derived from the image */
+    --sidebar-bg: #1c528f; /* Dark Blue for Sidebar */
+    --sidebar-text: #fff;
+    --main-bg: #f5f5f5; /* Very light gray/off-white for main background */
+    --header-bg: #fff;
+    --card-bg: #fff;
+    --card-accent: #f9b734; /* Orange/Yellow accent for card border */
+    --text-color: #333;
+    --secondary-text: #666;
+    --link-color: #007bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* 1. Dashboard Layout (Grid for Sidebar + Main Content) */
+.dashboard-container {
+    display: grid;
+    /* Sidebar width (approx 250px) and main content (rest) */
+    grid-template-columns: 250px 1fr; 
+    height: 100vh;
+}
+
+/* 2. Sidebar Styling */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 15px 0;
+    font-size: 1.1rem;
+    position: sticky; /* Helps keep the sidebar fixed */
+    top: 0;
+}
+
+.dashboard-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header i {
+    margin-right: 15px;
+    font-size: 1.8rem;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.nav-menu a i {
+    width: 25px; 
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* Highlight the active item (Home in the image) and hover state */
+.nav-menu li:nth-child(1) a,
+.nav-menu li:hover a { 
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    font-weight: bold;
+}
+
+.separator {
+    height: 30px;
+}
+
+/* 3. Main Content Area */
+.main-content {
+    display: grid;
+    /* Header/Searchbar (auto height) + Sections (rest of the space) */
+    grid-template-rows: auto 1fr; 
+    background-color: var(--main-bg);
+}
+
+/* Top Header/Search Bar Area */
+.main-header {
+    background-color: var(--header-bg);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.search-bar i {
+    color: var(--secondary-text);
+    margin-right: 15px;
+}
+
+.search-bar input {
+    border: none;
+    border-radius: 15px;
+    padding: 8px 15px;
+    width: 100%;
+    background-color: #eee;
+    font-size: 1rem;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-button {
+    font-size: 1.3rem;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+
+/* Secondary Header (Greeting and Action Buttons) */
+.secondary-header {
+    background-color: var(--header-bg);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-info-greeting {
+    display: flex;
+    align-items: center;
+}
+
+.greeting-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    /* Example: Yellow background for the image in the prompt */
+    background-color: #ffe082; 
+    padding: 5px; 
+}
+
+.greeting-text p {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 3px;
+}
+
+.greeting-text h2 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.action-buttons .btn {
+    background-color: var(--sidebar-bg);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.action-buttons .btn:hover {
+    background-color: #1a487c;
+}
+
+
+/* 4. Dashboard Sections (Projects, Announcements, Trending) */
+.dashboard-sections {
+    padding: 30px 20px;
+    display: grid;
+    /* Projects (approx 2/3 width) | Side Content (approx 1/3 width) */
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;
+    overflow-y: auto; 
+}
+
+.dashboard-sections h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    /* Two columns for project cards, allowing them to shrink */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 25px;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Project Card Specifics */
+.project-card {
+    position: relative;
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 8px;
+    background-color: var(--card-accent); 
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.project-card h4 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 15px;
+    color: #999;
+}
+
+.card-actions i {
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.card-actions i:hover {
+    color: var(--text-color);
+}
+
+
+/* Announcements Section */
+.side-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.announcements-card {
+    padding: 20px;
+}
+
+.announcement-item h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.announcement-item p {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+
+.announcements-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* Trending Section */
+.trending-card {
+    padding: 20px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.trending-item:last-child {
+    margin-bottom: 0;
+}
+
+.trending-item .avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.trending-info .handle {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 2px;
+}
+
+.trending-info .project {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
