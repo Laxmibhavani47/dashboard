@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="dashboard-header">
+                <i class="fas fa-th-large"></i> Dashboard
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="#"><i class="fas fa-tasks"></i> Tasks</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Communities</a></li>
+                    <li class="separator"></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Support</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-actions">
+                    <i class="fas fa-bell icon-button"></i>
+                    <img src="avatar-user-main.png" alt="Morgan Oakley" class="avatar">
+                    <span class="username">Morgan Oakley</span>
+                </div>
+            </header>
+
+            <div class="secondary-header">
+                <div class="user-info-greeting">
+                    <img src="avatar-user-greeting.png" alt="Hi" class="greeting-icon">
+                    <div class="greeting-text">
+                        <p>Hi there,</p>
+                        <h2>Morgan Oakley (@morgan)</h2>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn">New</button>
+                    <button class="btn">Upload</button>
+                    <button class="btn">Share</button>
+                </div>
+            </div>
+
+            <section class="dashboard-sections">
+                <div class="projects-section">
+                    <h3>Your Projects</h3>
+                    <div class="projects-grid">
+                        <div class="card project-card">
+                            <div class="card-border"></div>
+                            <h4>Super Cool Project</h4>
+                            <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                            <div class="card-actions">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-eye"></i>
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="card project-card">
+                            <div class="card-border"></div>
+                            <h4>Less Cool Project</h4>
+                            <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.</p>
+                            <div class="card-actions">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-eye"></i>
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="card project-card"><div class="card-border"></div><h4>Impossible App</h4><p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p><div class="card-actions"><i class="far fa-star"></i><i class="far fa-eye"></i><i class="fas fa-code-branch"></i></div></div>
+                        
+                        <div class="card project-card"><div class="card-border"></div><h4>Easy Peasy App</h4><p>Etiam cursus ex at efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p><div class="card-actions"><i class="far fa-star"></i><i class="far fa-eye"></i><i class="fas fa-code-branch"></i></div></div>
+                        
+                        <div class="card project-card"><div class="card-border"></div><h4>Ad Blocker</h4><p>Quisque eget rutrum nisi. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.</p><div class="card-actions"><i class="far fa-star"></i><i class="far fa-eye"></i><i class="fas fa-code-branch"></i></div></div>
+                        
+                        <div class="card project-card"><div class="card-border"></div><h4>Money Maker</h4><p>Praesent convallis, libero quis congue elementum, ante ante faucibus sapien, ac scelerisque tortor ipsum sed erat.</p><div class="card-actions"><i class="far fa-star"></i><i class="far fa-eye"></i><i class="fas fa-code-branch"></i></div></div>
+
+                    </div>
+                </div>
+
+                <div class="side-content">
+                    <div class="announcements-section">
+                        <h3>Announcements</h3>
+                        <div class="card announcements-card">
+                            <div class="announcement-item">
+                                <h5>Site Maintenance</h5>
+                                <p>Vestibulum condimentum tellus lacus, in congue ex accumsan ut. Donec laoreet sodales congue.</p>
+                            </div>
+                            <hr>
+                            <div class="announcement-item">
+                                <h5>Community Share Day</h5>
+                                <p>Nam vel ligula nec ipsum dictum accumsan. Aenean dictum accumsan porttitor...</p>
+                            </div>
+                            <hr>
+                            <div class="announcement-item">
+                                <h5>Updated Privacy Policy</h5>
+                                <p>Phasellus efficitur nisi et justo viverra, vitae porttitor est egestas. Mauris dolor. Cras fringilla sagittis sem in mattis...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-section">
+                        <h3>Trending</h3>
+                        <div class="card trending-card">
+                            <div class="trending-item">
+                                <img src="avatar-1.png" alt="@tegan" class="avatar">
+                                <div class="trending-info">
+                                    <p class="handle">@tegan</p>
+                                    <p class="project">World Peace Builder</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="avatar-2.png" alt="@morgan" class="avatar">
+                                <div class="trending-info">
+                                    <p class="handle">@morgan</p>
+                                    <p class="project">Super Cool Project</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="avatar-3.png" alt="@kendall" class="avatar">
+                                <div class="trending-info">
+                                    <p class="handle">@kendall</p>
+                                    <p class="project">Life Changing App</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <img src="avatar-4.png" alt="@alex" class="avatar">
+                                <div class="trending-info">
+                                    <p class="handle">@alex</p>
+                                    <p class="project">No Traffic Maker</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
